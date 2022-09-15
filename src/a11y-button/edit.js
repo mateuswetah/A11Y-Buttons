@@ -22,7 +22,8 @@ import {
 import { Fragment } from '@wordpress/element';
 import {
 	Icon,
-	Button
+	Button,
+	ExternalLink
 } from '@wordpress/components';
 
 /**
@@ -120,7 +121,18 @@ export default function Edit( { attributes, setAttributes, context, className } 
 					<TextControl
 						label={ __( 'Link on page to inner content', 'a11y-buttons' ) }
 						value={ attributes.link }
-						help={ __('The link here should point to a HTML anchor, usually defined by and ID and preppended by "#".', 'a11y-buttons' ) }
+						help={
+							<>
+								{ __('The link should point to a HTML anchor, usually defined by an ID and preppended by "#". ', 'a11y-buttons' ) }
+								<ExternalLink
+									href={ __(
+										'https://wordpress.org/support/article/page-jumps/'
+									) }
+								>
+									{ __( 'Learn more about anchors' ) }
+								</ExternalLink>
+							</>
+						}
 						onChange={ ( value ) => setAttributes({ link: value }) }
 					/>
 				</PanelBody>
@@ -129,7 +141,18 @@ export default function Edit( { attributes, setAttributes, context, className } 
 				<TextControl
 					label={ __( 'Access key shortcut', 'a11y-buttons' ) }
 					value={ attributes.accessKey }
-					help={ __('Access key is a single alphanumeric character that, combined with your browser access key shortcut, will help users quickly focus on this button via keyboard navigation. WARNING: Make sure the accesskey values are unique across the page and do not use conflicting shortcuts!', 'a11y-buttons' ) }
+					help={
+						<>
+							{ __('Access key is a single alphanumeric character that, combined with your browser access key shortcut, will help users quickly focus on this button. WARNING: Make sure the accesskey values are unique across the page! ', 'a11y-buttons' ) }
+							<ExternalLink
+								href={ __(
+									'https://html.spec.whatwg.org/multipage/interaction.html#the-accesskey-attribute'
+								) }
+							>
+								{ __( 'Learn more about access keys', 'a11y-buttons' ) }
+							</ExternalLink>
+						</>
+					}
 					onChange={ setAccessKey }
 				/>
 			</PanelBody>

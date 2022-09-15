@@ -38,7 +38,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-const ALLOWED_BLOCKS = ['a11y-buttons/a11y-button'];
+const ALLOWED_BLOCKS = ['a11y-buttons/a11y-button', 'core/spacer'];
 const BUTTONS_TEMPLATE = [['a11y-buttons/a11y-button', {
   'content': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Skip to content', 'a11y-buttons'),
   'action': 'skip-to-content'
@@ -295,7 +295,7 @@ module.exports = window["wp"]["i18n"];
   \*************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"a11y-buttons/a11y-buttons","version":"0.1.0","title":"A11Y Buttons","category":"widgets","keywords":["acessibility","a11y","font size","contrast","links","universal access","accesskey","shortcuts","visually impaired","blind"],"icon":"universal-access-alt","description":"A list of accessibility buttons, such as font-size changing, contrast mode and skip links. Use them to help improve your website universal access.","attributes":{"iconDisplay":{"type":"string","default":"left"}},"providesContext":{"a11yButtons/iconDisplay":"iconDisplay"},"supports":{"align":["left","center","right"],"anchor":true,"__experimentalExposeControlsToChildren":true,"__experimentalLayout":{"allowSwitching":false,"allowInheriting":false,"default":{"type":"flex"}},"spacing":{"blockGap":true,"margin":["top","bottom"],"units":["px","em","rem","vh","vw"],"__experimentalDefaultControls":{"blockGap":true}}},"textdomain":"a11y-buttons","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"a11y-buttons/a11y-buttons","version":"0.1.0","title":"A11Y Buttons","category":"widgets","keywords":["acessibility","a11y","font size","contrast","links","universal access","accesskey","shortcuts","visually impaired","blind"],"icon":"universal-access-alt","description":"A list of accessibility buttons, such as font-size changing, contrast mode and skip links. Use them to help improve your website universal access.","attributes":{"iconDisplay":{"type":"string","default":"left"}},"providesContext":{"a11yButtons/iconDisplay":"iconDisplay"},"supports":{"align":["left","center","right","wide","full"],"anchor":true,"__experimentalExposeControlsToChildren":true,"__experimentalLayout":{"allowSwitching":false,"allowInheriting":false,"default":{"type":"flex"}},"spacing":{"blockGap":true,"margin":["top","bottom"],"units":["px","em","rem","vh","vw"],"__experimentalDefaultControls":{"blockGap":true}}},"textdomain":"a11y-buttons","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

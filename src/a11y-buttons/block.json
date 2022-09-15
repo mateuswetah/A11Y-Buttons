@@ -18,7 +18,7 @@
 		"a11yButtons/iconDisplay": "iconDisplay"
 	},
 	"supports": {
-		"align": [ "left", "center", "right" ],
+		"align": [ "left", "center", "right", "wide", "full" ],
 		"anchor": true,
 		"__experimentalExposeControlsToChildren": true,
 		"__experimentalLayout": {

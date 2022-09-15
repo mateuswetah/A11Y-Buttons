@@ -2,9 +2,10 @@
 Author:            wetah, The WordPress Contributors 
 Tags:              block, a11y, accessibility
 Tested up to:      6.0
+Requires at least: 6.0
 Stable tag:        0.1.0
-License:           GPL-2.0-or-later
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 A basic list of buttons that may be used to improve your website accessibility
 
@@ -71,11 +72,12 @@ We keep track of font-size and contrast toggle state preferences across pages us
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. The A11Y Buttons parent block, which accept different buttons inside it with layout settings and icon display options.
+2. A "Skip to content" button selected, with a link to `#content` and accesskey `c`;
+3. The published page view, with the accessibilty buttons;
+4. High contrast mode activated;
+5. Font size increased;
+6. Font size decreased;
 
 == Changelog ==
 

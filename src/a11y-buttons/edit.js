@@ -20,7 +20,10 @@ import { getBlockSupport } from '@wordpress/blocks';
  */
 import './editor.scss';
 
-const ALLOWED_BLOCKS = [ 'a11y-buttons/a11y-button' ];
+const ALLOWED_BLOCKS = [
+	'a11y-buttons/a11y-button',
+	'core/spacer'
+];
 const BUTTONS_TEMPLATE = [
 	[ 'a11y-buttons/a11y-button', {
 		'content': __( 'Skip to content', 'a11y-buttons'  ),

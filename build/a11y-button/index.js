@@ -141,7 +141,9 @@ function Edit(_ref) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Link on page to inner content', 'a11y-buttons'),
     value: attributes.link,
-    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('The link here should point to a HTML anchor, usually defined by and ID and preppended by "#".', 'a11y-buttons'),
+    help: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('The link should point to a HTML anchor, usually defined by an ID and preppended by "#". ', 'a11y-buttons'), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ExternalLink, {
+      href: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('https://wordpress.org/support/article/page-jumps/')
+    }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Learn more about anchors'))),
     onChange: value => setAttributes({
       link: value
     })
@@ -150,7 +152,9 @@ function Edit(_ref) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Access key shortcut', 'a11y-buttons'),
     value: attributes.accessKey,
-    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Access key is a single alphanumeric character that, combined with your browser access key shortcut, will help users quickly focus on this button via keyboard navigation. WARNING: Make sure the accesskey values are unique across the page and do not use conflicting shortcuts!', 'a11y-buttons'),
+    help: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Access key is a single alphanumeric character that, combined with your browser access key shortcut, will help users quickly focus on this button. WARNING: Make sure the accesskey values are unique across the page! ', 'a11y-buttons'), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ExternalLink, {
+      href: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('https://html.spec.whatwg.org/multipage/interaction.html#the-accesskey-attribute')
+    }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Learn more about access keys', 'a11y-buttons'))),
     onChange: setAccessKey
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
     href: attributes.action == 'skip-to-content' ? attributes.link : undefined,

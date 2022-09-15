@@ -1,21 +1,27 @@
 /* A11Y BUTTONS STYLE */
 /* This file holds the styling made by the plugin on the site css for some states. */
 
-.a11y-buttons-high-contrast-mode * {
+.a11y-buttons-high-contrast-mode *,
+.a11y-buttons-high-contrast-mode *.has-background,
+.a11y-buttons-high-contrast-mode *.has-text-color {
     background-color: black !important;
     color: white !important;
 }
 
-.a11y-buttons-high-contrast-mode a {
+.a11y-buttons-high-contrast-mode a,
+.a11y-buttons-high-contrast-mode a.has-link-color {
     color: rgb(0, 225, 255) !important;
 }
-.a11y-buttons-high-contrast-mode a:hover {
+.a11y-buttons-high-contrast-mode a:hover,
+.a11y-buttons-high-contrast-mode a.has-link-color:hover {
     color: rgb(251, 255, 0) !important;
 }
-.a11y-buttons-high-contrast-mode a:active {
+.a11y-buttons-high-contrast-mode a:active,
+.a11y-buttons-high-contrast-mode a.has-link-color:active {
     color: rgb(21, 255, 0) !important;
 }
-.a11y-buttons-high-contrast-mode a:visited {
+.a11y-buttons-high-contrast-mode a:visited,
+.a11y-buttons-high-contrast-mode a.has-link-color:visited {
     color: rgb(225, 0, 255) !important;
 }
 
