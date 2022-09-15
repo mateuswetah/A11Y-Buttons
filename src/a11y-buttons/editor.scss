@@ -1,0 +1,16 @@
+// Editor specific styles for Social Links.
+.wp-block-a11y-buttons-a11y-buttons {
+	div.block-editor-url-input {
+		display: inline-block;
+		margin-left: 1rem;
+	}
+}
+
+.editor-styles-wrapper .wp-block-a11y-buttons-a11y-buttons {
+	padding: 0;
+}
+
+// Center flex items. This has an equivalent in style.scss.
+.wp-block[data-align="center"] > .wp-block-a11y-buttons-a11y-buttons {
+	justify-content: center;
+}

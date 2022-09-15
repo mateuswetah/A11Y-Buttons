@@ -1,0 +1,52 @@
+/* A11Y BUTTONS STYLE */
+/* This file holds the styling made by the plugin on the site css for some states. */
+
+.a11y-buttons-high-contrast-mode * {
+    background-color: black !important;
+    color: white !important;
+}
+
+.a11y-buttons-high-contrast-mode a {
+    color: rgb(0, 225, 255) !important;
+}
+.a11y-buttons-high-contrast-mode a:hover {
+    color: rgb(251, 255, 0) !important;
+}
+.a11y-buttons-high-contrast-mode a:active {
+    color: rgb(21, 255, 0) !important;
+}
+.a11y-buttons-high-contrast-mode a:visited {
+    color: rgb(225, 0, 255) !important;
+}
+
+.a11y-buttons-high-contrast-mode button,
+.a11y-buttons-high-contrast-mode input,
+.a11y-buttons-high-contrast-mode textarea,
+.a11y-buttons-high-contrast-mode select {
+    box-shadow: 0 0 0 3px rgb(0, 225, 255) !important;
+}
+.a11y-buttons-high-contrast-mode button:focus,
+.a11y-buttons-high-contrast-mode input:focus,
+.a11y-buttons-high-contrast-mode textarea:focus,
+.a11y-buttons-high-contrast-mode select:focus {
+    box-shadow: 0 0 0 3px rgb(255, 145, 0) !important;
+}
+.a11y-buttons-high-contrast-mode button:hover,
+.a11y-buttons-high-contrast-mode input:hover,
+.a11y-buttons-high-contrast-mode textarea:hover,
+.a11y-buttons-high-contrast-mode select:hover {
+    box-shadow: 0 0 0 3px rgb(251, 255, 0) !important;
+}
+.a11y-buttons-high-contrast-mode button:active,
+.a11y-buttons-high-contrast-mode input:active,
+.a11y-buttons-high-contrast-mode textarea:active,
+.a11y-buttons-high-contrast-mode select:active {
+    box-shadow: 0 0 0 3px rgb(21, 255, 0) !important;
+}
+
+.a11y-buttons-high-contrast-mode button:active,
+.a11y-buttons-high-contrast-mode input:active,
+.a11y-buttons-high-contrast-mode textarea:active,
+.a11y-buttons-high-contrast-mode select:active {
+    box-shadow: 0 0 0 3px rgb(225, 0, 255) !important;
+}

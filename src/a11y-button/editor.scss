@@ -1,0 +1,9 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-a11y-buttons-a11y-button .components-button,
+.wp-block-a11y-buttons-a11y-button .block-editor-rich-text__editable.a11y-button-text {
+    font-size: 1em;
+}

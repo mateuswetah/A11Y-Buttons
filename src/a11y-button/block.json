@@ -1,0 +1,79 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "a11y-buttons/a11y-button",
+	"version": "0.1.0",
+	"title": "A11Y Button",
+	"category": "widgets",
+	"icon": "universal-access-alt",
+	"description": "A basic accessibility button.",
+	"parent": [ "a11yButtons/a11yButtons" ],
+	"attributes": {
+		"content":{
+			"source": "html",
+			"selector": "span.a11y-button-text",
+			"type": "string"
+		},
+		"action": {
+			"type": "string",
+			"default": "increase-font-size"
+		},
+		"iconDisplay": {
+			"type": "string",
+			"default": "left"
+		},
+		"link": {
+			"type": "string",
+			"default": "#content"
+		},
+		"accessKey": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"usesContext": [
+		"a11yButtons/iconDisplay"
+	],
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"alignWide": false,
+		"color": {
+			"__experimentalSkipSerialization": true,
+			"link": true,
+			"background": true,
+			"text": true
+		},
+		"typography": {
+			"fontSize": true,
+			"__experimentalFontFamily": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"reusable": false,
+		"spacing": {
+			"margin": true,
+			"__experimentalSkipSerialization": true,
+			"padding": [ "horizontal", "vertical" ],
+			"__experimentalDefaultControls": {
+				"padding": true
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"style": true,
+				"width": true
+			}
+		},
+		"html": true
+	},
+	"textdomain": "a11y-buttons",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
