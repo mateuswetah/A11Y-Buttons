@@ -5,7 +5,17 @@
 	"version": "0.1.0",
 	"title": "A11Y Buttons",
 	"category": "widgets",
-	"keywords": ["acessibility", "a11y", "font size", "contrast", "links", "universal access", "accesskey", "shortcuts", "visually impaired", "blind"],
+	"keywords": [
+		"acessibility",
+		"a11y",
+		"font size",
+		"contrast",
+		"links",
+		"universal access",
+		"shortcuts",
+		"visually impaired",
+		"blind"
+	],
 	"icon": "universal-access-alt",
 	"description": "A list of accessibility buttons, such as font-size changing, contrast mode and skip links. Use them to help improve your website universal access.",
 	"attributes": {

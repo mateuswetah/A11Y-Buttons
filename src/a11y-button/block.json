@@ -9,7 +9,7 @@
 	"description": "A basic accessibility button.",
 	"parent": [ "a11yButtons/a11yButtons" ],
 	"attributes": {
-		"content":{
+		"content": {
 			"source": "html",
 			"selector": "span.a11y-button-text",
 			"type": "string"
@@ -25,15 +25,9 @@
 		"link": {
 			"type": "string",
 			"default": "#content"
-		},
-		"accessKey": {
-			"type": "string",
-			"default": ""
 		}
 	},
-	"usesContext": [
-		"a11yButtons/iconDisplay"
-	],
+	"usesContext": [ "a11yButtons/iconDisplay" ],
 	"supports": {
 		"anchor": true,
 		"align": true,

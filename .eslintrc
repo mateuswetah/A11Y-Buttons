@@ -1,0 +1,12 @@
+{
+	"extends": [ "plugin:@wordpress/eslint-plugin/recommended" ],
+    "rules": {
+        "@wordpress/no-unsafe-wp-apis": [
+            "error",
+            {
+                "@wordpress/block-editor": [ "__experimentalUseBorderProps", "__experimentalUseColorProps", "__experimentalGetSpacingClassesAndStyles", "__experimentalGetBorderClassesAndStyles", "__experimentalGetColorClassesAndStyles" ],
+                "@wordpress/components": [ "__experimentalToggleGroupControl", "__experimentalToggleGroupControlOption" ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,4 @@
+{
+  "script": "file:./index.js",
+  "style": "file:./style-index.css"
+}

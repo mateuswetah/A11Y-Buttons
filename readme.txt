@@ -23,7 +23,6 @@ All of the buttons have the following features:
 
 * Order, alignment, spacing and overall layout are fully customizable;
 * Text formatting, font size, text and background color, borders - if the theme supports it;
-* Accesskey - define a keyboard shortcut via a single character so the user can easily focus a button;
 * Enabling or disabling the default icons, moving them to the left or right,
 
 *We understand that accessibility is a huge topic and that no solution is perfect. We also are by no means "experts" on the subject, so if you have any critics or suggestions, please make contact!*
@@ -60,11 +59,7 @@ Skip links should use HTML anchor navigation, which is done via IDs. If the ID i
 
 = Why is my Skip to Link button styled differently from the other buttons? =
 
-Internally, the Skip to link button is an anchor (`<a>`) tag, as its role is related to navigation. The other ones are actual `<button>` tags as they perform actions and not linking. You may use the block formatting and settings to make them similar to each other.
-
-= What is and how to test the Accesskey? =
-
-Accesskey is an HTML feature for navigating via focus on different elements using keyboard shortcuts. You can learn about it [here](https://html.spec.whatwg.org/multipage/interaction.html#the-accesskey-attribute "The HTML spec documentation for accesskey"). Sadly, each Browser/OS implements its shortcut differently but can check the possible values [here](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/accesskey "MDN list of current shortcuts used by accesskey."). So for example, if you set your Skip to content button to the Search input and defined the Accesskey as `s` (should be only one character), a user on Firefox on Windows or Linux will be able to quickly set focus to this button by pressing `ALT` + `SHIFT` + `s`.
+Internally, the Skip to link button is an anchor (`<a>`) tag, as its role is related to navigation. The other ones are actual `<button>` tags as they perform actions and not as linking. You may use the block formatting and settings to make them similar to each other.
 
 = How are my preferences stored? =
 
@@ -72,9 +67,9 @@ We keep track of font-size and contrast toggle state preferences across pages us
 
 == Screenshots ==
 
-1. The A11Y Buttons parent block, which accept different buttons inside it with layout settings and icon display options.
-2. A "Skip to content" button selected, with a link to `#content` and accesskey `c`;
-3. The published page view, with the accessibilty buttons;
+1. The A11Y Buttons parent block, which accepts different buttons inside it with layout settings and icon display options.
+2. A "Skip to content" button selected;
+3. The published page view, with the accessibility buttons;
 4. High contrast mode activated;
 5. Font size increased;
 6. Font size decreased;
@@ -82,5 +77,5 @@ We keep track of font-size and contrast toggle state preferences across pages us
 == Changelog ==
 
 = 0.1.0 =
-* Initial - quite experimental - release, featuring constrast toggle, font size tweak and skip to link buttons.
+* Initial - quite experimental - release, featuring contrast toggle, font size tweak and skip to link buttons.
 

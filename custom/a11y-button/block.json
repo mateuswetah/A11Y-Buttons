@@ -74,7 +74,7 @@
     "html": true
   },
   "textdomain": "a11y-buttons",
-  "editorScript": "file:./index.js",
-  "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css"
+  "editorScript": "file:./index-a11y-button.js",
+  "editorStyle": "file:./index-a11y-button.css",
+  "style": "file:./style-index-a11y-button.css"
 }

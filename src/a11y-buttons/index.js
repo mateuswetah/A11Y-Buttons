@@ -27,11 +27,8 @@ import metadata from './block.json';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType( metadata.name, {
-	/**
-	 * @see ./edit.js
-	 */
+export default registerBlockType( metadata.name, {
 	edit: Edit,
 	save: Save,
-	icon: Icon
+	icon: Icon,
 } );

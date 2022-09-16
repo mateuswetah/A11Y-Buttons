@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import classnames from 'classnames'; 
+import classnames from 'classnames';
 
 /**
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
 import {
-    RichText,
-    useBlockProps,
-    __experimentalGetBorderClassesAndStyles as getBorderClassesAndStyles,
-    __experimentalGetColorClassesAndStyles as getColorClassesAndStyles,
-    __experimentalGetSpacingClassesAndStyles as getSpacingClassesAndStyles,
+	RichText,
+	useBlockProps,
+	__experimentalGetBorderClassesAndStyles as getBorderClassesAndStyles,
+	__experimentalGetColorClassesAndStyles as getColorClassesAndStyles,
+	__experimentalGetSpacingClassesAndStyles as getSpacingClassesAndStyles,
 } from '@wordpress/block-editor';
 
 /**
@@ -23,12 +23,11 @@ import {
 	increaseFontSizeIcon,
 	decreaseFontSizeIcon,
 	resetFontSizeIcon,
-	skipToContentIcon
+	skipToContentIcon,
 } from './icons';
 
 export default function Save( { attributes, className } ) {
-
-    const borderProps = getBorderClassesAndStyles( attributes );
+	const borderProps = getBorderClassesAndStyles( attributes );
 	const colorProps = getColorClassesAndStyles( attributes );
 	const spacingProps = getSpacingClassesAndStyles( attributes );
 	const buttonClasses = classnames(
@@ -45,13 +44,14 @@ export default function Save( { attributes, className } ) {
 		...colorProps.style,
 		...spacingProps.style,
 	};
-    const wrapperClasses = classnames( className, {
-		[ `has-custom-font-size` ]: attributes.fontSize || attributes.style?.typography?.fontSize,
+	const wrapperClasses = classnames( className, {
+		[ `has-custom-font-size` ]:
+			attributes.fontSize || attributes.style?.typography?.fontSize,
 	} );
-    const blockProps = useBlockProps.save( { className: wrapperClasses } );
+	const blockProps = useBlockProps.save( { className: wrapperClasses } );
 
 	function getDefaultSVGIcon() {
-		switch (attributes.action) {
+		switch ( attributes.action ) {
 			case 'toggle-high-contrast':
 				return toggleHighContrastIcon;
 			case 'increase-font-size':
@@ -68,7 +68,7 @@ export default function Save( { attributes, className } ) {
 	}
 
 	function getProvisoryAltText() {
-		switch (attributes.action) {
+		switch ( attributes.action ) {
 			case 'toggle-high-contrast':
 				return __( 'Toggle high contrast', 'a11y-buttons' );
 			case 'increase-font-size':
@@ -84,39 +84,53 @@ export default function Save( { attributes, className } ) {
 		}
 	}
 
-    return <li { ...blockProps }>
-		{ attributes.action == 'skip-to-content' ?
-			<a
+	return (
+		<li { ...blockProps }>
+			{ attributes.action === 'skip-to-content' ? (
+				<a
 					href={ attributes.link }
-					accessKey={ attributes.accessKey ? attributes.accessKey : null }
-					aria-label={ !attributes.content ? getProvisoryAltText() : null }
+					aria-label={
+						! attributes.content ? getProvisoryAltText() : null
+					}
 					data-action={ attributes.action }
 					className={ buttonClasses }
-					style={ buttonStyle }>
-				{ attributes.iconDisplay == 'left' ? getDefaultSVGIcon() : null }
-				<RichText.Content 
-					tagName="span"
-					className="a11y-button-text"
-					value={ attributes.content }
-				/>
-				{ attributes.iconDisplay == 'right' ? getDefaultSVGIcon() : null }
-			</a>
-			:
-			<button
+					style={ buttonStyle }
+				>
+					{ attributes.iconDisplay === 'left'
+						? getDefaultSVGIcon()
+						: null }
+					<RichText.Content
+						tagName="span"
+						className="a11y-button-text"
+						value={ attributes.content }
+					/>
+					{ attributes.iconDisplay === 'right'
+						? getDefaultSVGIcon()
+						: null }
+				</a>
+			) : (
+				<button
 					type="button"
-					accessKey={ attributes.accessKey ? attributes.accessKey : null }
-					aria-label={ !attributes.content ? getProvisoryAltText() : null }
+					aria-label={
+						! attributes.content ? getProvisoryAltText() : null
+					}
 					data-action={ attributes.action }
 					className={ buttonClasses }
-					style={ buttonStyle }>
-				{ attributes.iconDisplay == 'left' ? getDefaultSVGIcon() : null }
-				<RichText.Content 
-					tagName="span"
-					className="a11y-button-text"
-					value={ attributes.content }
-				/>
-				{ attributes.iconDisplay == 'right' ? getDefaultSVGIcon() : null }
-			</button>
-		}
-    </li>;
+					style={ buttonStyle }
+				>
+					{ attributes.iconDisplay === 'left'
+						? getDefaultSVGIcon()
+						: null }
+					<RichText.Content
+						tagName="span"
+						className="a11y-button-text"
+						value={ attributes.content }
+					/>
+					{ attributes.iconDisplay === 'right'
+						? getDefaultSVGIcon()
+						: null }
+				</button>
+			) }
+		</li>
+	);
 }

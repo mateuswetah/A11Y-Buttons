@@ -4,19 +4,19 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
- .wp-block-a11y-buttons-a11y-button {
+.wp-block-a11y-buttons-a11y-button {
 	display: inline-block;
 
 	button,
 	a {
 		display: flex;
-		padding: .25em .75em;
+		padding: 0.25em 0.75em;
 		font-size: 1em;
 		align-items: center;
 		gap: 0.5em;
 
 		svg {
-			padding: .25em 0;
+			padding: 0.25em 0;
 			display: block;
 			box-sizing: content-box;
 		}
@@ -24,11 +24,13 @@
 		&:not(.has-background) {
 			background: transparent;
 		}
+
 		&:not(.has-text-color) {
-			color: currentColor;
+			color: currentcolor;
 		}
+
 		&:not(.has-border-color) {
-			border: 0px solid transparent;
+			border: 0 solid transparent;
 		}
 	}
 }

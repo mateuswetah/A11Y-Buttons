@@ -30,8 +30,11 @@ function create_block_a11y_buttons_block_init() {
 }
 add_action( 'init', 'create_block_a11y_buttons_block_init' );
 
+/**
+ * Enqueues necessary action script to perform buttons utilities
+ */
 function enqueue_actions_script() {
-	wp_enqueue_style( 'a11y-buttons-styles', plugin_dir_url(__FILE__) . '/src/a11y-buttons-styles.css', array(), '0.1.0' );
-	wp_enqueue_script( 'a11y-buttons-actions-script', plugin_dir_url(__FILE__) . '/src/a11y-buttons-actions.js', array(), '0.1.0' );
+	wp_enqueue_style( 'a11y-buttons-style', plugin_dir_url(__FILE__) . 'build/a11y-actions/style-index.css', array(), '0.1.0' );
+	wp_enqueue_script( 'a11y-buttons-actions-script', plugin_dir_url(__FILE__) . 'build/a11y-actions/index.js', array(), '0.1.0' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_actions_script' );
