@@ -65,11 +65,15 @@ Internally, the Skip to link button is an anchor (`<a>`) tag, as its role is rel
 
 We keep track of font-size and contrast toggle state preferences across pages using [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/sessionStorage "MDN documentation for the browser sessionStorage").
 
+= Can I have accesskey on each button? =
+
+Originally, we planned to have a simple feature to add `accesskey` to each button. After reading [this](https://webaim.org/techniques/keyboard/accesskey#spec "WebAIM article about accesskey"), we gave up.
+
 == Screenshots ==
 
 1. The A11Y Buttons parent block, which accepts different buttons inside it with layout settings and icon display options.
 2. A "Skip to content" button selected;
-3. The published page view, with the accessibility buttons;
+3. The published page view, with the accessibility buttons on top;
 4. High contrast mode activated;
 5. Font size increased;
 6. Font size decreased;

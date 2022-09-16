@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:       A11Y Buttons
- * Description:       Example block scaffolded with Create Block tool.
- * Requires at least: 5.9
+ * Description:       A basic list of buttons that may be used to improve your website accessibility.
+ * Requires at least: 6.0
  * Requires PHP:      7.0
  * Version:           0.1.0
  * Author:            wetah
