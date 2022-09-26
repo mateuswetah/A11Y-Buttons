@@ -11,7 +11,7 @@ A basic list of buttons that may be used to improve your website accessibility
 
 == Description ==
 
-This plugin enables an *A11Y Buttons* block, which contains some common accessibility buttons that you usually find in a website's top header. The idea is to provide a simple way to have them inserted in any part of your theme and keep them fully customizable so they can match your design and still offer the required features.
+This plugin enables an *A11Y Buttons* block, which contains some common accessibility buttons that you usually find in a website's top header. The idea is to provide a simple way to have them inserted in any part of your theme, without adding overlays and keep them fully customizable so they can match your design and still offer the required features.
 
 The buttons available are:
 
@@ -63,7 +63,7 @@ Internally, the Skip to link button is an anchor (`<a>`) tag, as its role is rel
 
 = How are my preferences stored? =
 
-We keep track of font-size and contrast toggle state preferences across pages using [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/sessionStorage "MDN documentation for the browser sessionStorage").
+The plugin keeps track of font-size and contrast toggle state preferences across pages using [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/sessionStorage "MDN documentation for the browser sessionStorage"). Make sure to warn your users if you feel that can be sensible.
 
 = Can I have accesskey on each button? =
 

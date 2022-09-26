@@ -20,7 +20,7 @@
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function create_block_a11y_buttons_block_init() {
+function a11y_buttons_blocks_init() {
 	register_block_type(
 		__DIR__ . '/build/a11y-button'
 	);
@@ -28,13 +28,13 @@ function create_block_a11y_buttons_block_init() {
 		__DIR__ . '/build/a11y-buttons'
 	);
 }
-add_action( 'init', 'create_block_a11y_buttons_block_init' );
+add_action( 'init', 'a11y_buttons_blocks_init' );
 
 /**
  * Enqueues necessary action script to perform buttons utilities
  */
-function enqueue_actions_script() {
+function a11y_buttons_enqueue_actions_script() {
 	wp_enqueue_style( 'a11y-buttons-style', plugin_dir_url(__FILE__) . 'build/a11y-actions/style-index.css', array(), '0.1.0' );
 	wp_enqueue_script( 'a11y-buttons-actions-script', plugin_dir_url(__FILE__) . 'build/a11y-actions/index.js', array(), '0.1.0' );
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_actions_script' );
+add_action( 'wp_enqueue_scripts', 'a11y_buttons_enqueue_actions_script' );
