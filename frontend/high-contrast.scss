@@ -3,13 +3,14 @@
 /* This file holds the styling made by the plugin
  * on the site css for some states.
  */
-.a11y-buttons-high-contrast-mode {
+ .a11y-buttons-high-contrast-mode {
 
 	*,
 	*.has-background,
 	*.has-text-color {
 		background-color: #000 !important;
 		color: #fff !important;
+		fill: #fff !important;
 	}
 
 	a,
@@ -30,6 +31,7 @@
 	}
 
 	button,
+	.wp-block-button,
 	input,
 	textarea,
 	select {

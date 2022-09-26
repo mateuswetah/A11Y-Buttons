@@ -56,11 +56,9 @@ npm run plugin-zip
 
 As a developer, your work should be done inside the `src` folder. It contains:
 
--   The parent block files inside `a11y-buttons` folder;
--   The buttons blocks (every variant) inside the `a11y-button` folder;
--   The script and styles loaded on the theme, public side of the page to make the buttons work inside the `a11y-actions` folder;
-
-> **Wait, why there is a weird `block.json` file inside `a11y-actions`?** Well, this is the way we could make `wp-scripts` build our extra files there as we are not Webpack experts... if you have a better idea we are open to it :)
+-   The parent block files inside `blocks/a11y-buttons` folder;
+-   The buttons blocks (every variant) inside the `blocks/a11y-button` folder;
+-   The script and styles loaded on the theme, public side of the page to make the buttons work inside the `frontend` folder;
 
 ## F.A.Q.
 

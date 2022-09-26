@@ -85,7 +85,8 @@ export default function Save( { attributes, className } ) {
 	}
 
 	return (
-		<li { ...blockProps }>
+		<li 
+			{ ...blockProps }>
 			{ attributes.action === 'skip-to-content' ? (
 				<a
 					href={ attributes.link }

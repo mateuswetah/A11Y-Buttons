@@ -1,13 +1,5 @@
-// A11Y BUTTONS ACTIONS SCRIPT
+// A11Y BUTTONS FRONTEND ACTIONS SCRIPT
 // This file holds the logic of each button and their behaviour.
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * All files containing `style` keyword are bundled together.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-import './style.scss';
 
 /**
  * This routine checks if the page document is loaded.
@@ -73,6 +65,8 @@ function updateFontSize( action = 'increase', setValue ) {
  * elements based on our high contrast stylesheet.
  */
 function toggleHighContrast() {
+	loadFile('frontend/high-contrast.css', 'css');
+
 	const htmlElement = document.getElementsByTagName( 'html' )[ 0 ];
 	const isContrastModeEnabled = htmlElement.classList.toggle(
 		'a11y-buttons-high-contrast-mode'
@@ -142,6 +136,23 @@ function addActionsToButtons() {
 		} );
 	}
 }
+
+function loadFile(path, type) {
+	const pluginPath = a11yButtonSettings['pluginBuildPath'];
+	path = pluginPath + path;
+
+	if (type == "js") {
+	  var fileref = document.createElement("script");
+	  fileref.setAttribute("type", "text/javascript");
+	  fileref.setAttribute("src", path);
+	} else if (type == "css") {
+	  var fileref = document.createElement("link");
+	  fileref.setAttribute("rel", "stylesheet");
+	  fileref.setAttribute("type", "text/css");
+	  fileref.setAttribute("href", path);
+	}
+	document.getElementsByTagName("head")[0].appendChild(fileref);
+  }
 
 /*
  * Waiting the page to be loaded to initialize things
