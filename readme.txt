@@ -3,7 +3,7 @@ Author:            wetah, The WordPress Contributors
 Tags:              block, a11y, accessibility
 Tested up to:      6.0
 Requires at least: 6.0
-Stable tag:        0.1.1
+Stable tag:        0.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -79,6 +79,10 @@ Originally, we planned to have a simple feature to add `accesskey` to each butto
 6. Font size decreased;
 
 == Changelog ==
+
+= 0.1.2 =
+* Fixes contrast mode css path;
+* Proper cursor when hovering buttons; 
 
 = 0.1.1 =
 * Better build workflow;

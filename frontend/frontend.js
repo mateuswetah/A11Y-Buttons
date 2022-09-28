@@ -138,7 +138,7 @@ function addActionsToButtons() {
 }
 
 function loadFile( path, type ) {
-	const pluginPath = window.a11ButtonSettings
+	const pluginPath = window.a11yButtonSettings
 		? window.a11yButtonSettings.pluginBuildPath
 		: '';
 	path = pluginPath + path;

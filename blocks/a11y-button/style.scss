@@ -32,5 +32,14 @@
 		&:not(.has-border-color) {
 			border: 0 solid transparent;
 		}
+
+		&.components-button .block-editor-rich-text__editable {
+			cursor: text;
+		}
+
+		&:not(.components-button) {
+			cursor: pointer;
+		}
 	}
+
 }
