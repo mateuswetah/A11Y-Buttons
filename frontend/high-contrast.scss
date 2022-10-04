@@ -17,12 +17,16 @@
 	a.has-link-color {
 		color: rgb(0, 225, 255) !important;
 
-		&:hover {
-			color: rgb(251, 255, 0) !important;
+		> * {
+			color: inherit !important;
 		}
 
 		&:active {
 			color: rgb(21, 255, 0) !important;
+		}
+
+		&:hover {
+			color: rgb(251, 255, 0) !important;
 		}
 
 		&:visited {
@@ -48,6 +52,12 @@
 		&:active {
 			box-shadow: 0 0 0 3px rgb(21, 255, 0) !important;
 		}
+	}
+
+	figure.a11y-invert-on-contrast-mode > img,
+	img.a11y-invert-on-contrast-mode {
+		-webkit-filter: invert(100%) !important;
+		filter: invert(100%) !important;
 	}
 
 }

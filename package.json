@@ -1,11 +1,10 @@
 {
 	"name": "a11y-buttons",
-	"version": "0.1.2",
+	"version": "0.2.0",
 	"description": "A basic list of buttons that may be used to improve your website accessibility.",
 	"author": "mateuswetah",
 	"license": "GPL-3.0-or-later",
 	"main": "build/index.js",
-	"files": [ "build/a11y-button", "build/a11y-buttons", "build/frontend", "assets" ],
 	"scripts": {
 		"build": "wp-scripts build --webpack-src-dir=blocks --webpack-copy-php",
 		"format": "wp-scripts format",

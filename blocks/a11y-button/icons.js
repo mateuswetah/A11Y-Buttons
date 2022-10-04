@@ -80,8 +80,7 @@ export const toggleReadableFontIcon = (
 		width="1.25em"
 		viewBox="0 0 24 24"
 	>
-		<Path
-    		d="m 5,3.2109373 v 2.8007813 h 5.599609 V 20.789063 h 2.800782 V 6.0117186 H 19 V 3.2109373 Z" />
+		<Path d="m 5,3.2109373 v 2.8007813 h 5.599609 V 20.789063 h 2.800782 V 6.0117186 H 19 V 3.2109373 Z" />
 	</SVG>
 );
 
@@ -91,5 +90,5 @@ export default {
 	resetFontSizeIcon,
 	toggleHighContrastIcon,
 	skipToContentIcon,
-	toggleReadableFontIcon
+	toggleReadableFontIcon,
 };

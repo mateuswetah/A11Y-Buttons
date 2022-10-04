@@ -10,6 +10,7 @@ The buttons available are:
 
 -   **Skip-to-content button** - Add a link to any anchored part of your website. You can create and set as many as you want;
 -   **Contrast mode toggle** - Enable a stylesheet with extremely high contrast;
+-   **Readable font toggle** - Forces usage of the [Atkinson Hyperlegible Font](https://brailleinstitute.org/freefont "Braille Institute page about the Atkinson font") for better readability;
 -   **Increase/decrease/restore font-size** - Change your website's root font size. Check the F.A.Q. section about its usage.
 
 All of the buttons have the following features:
@@ -89,3 +90,7 @@ The plugin keeps track of font-size and contrast toggle state preferences across
 ### Can I have accesskey on each button?
 
 Originally, we planned to have a simple feature to add `accesskey` to each button. After reading [this](https://webaim.org/techniques/keyboard/accesskey#spec "WebAIM article about accesskey"), we gave up.
+
+### Can I invert the color of an image in High Contrast mode? =
+
+Yes! If you have an image like a monochromatic logo that would make sense to be inverted, add the class `a11y-invert-on-contrast-mode` to it so it can be inverted.

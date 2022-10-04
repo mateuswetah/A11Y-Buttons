@@ -100,5 +100,5 @@ export default [
 			'a11y-buttons'
 		),
 		isActive: [ 'action' ],
-	}
+	},
 ];

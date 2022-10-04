@@ -33,7 +33,7 @@ import {
 	decreaseFontSizeIcon,
 	resetFontSizeIcon,
 	skipToContentIcon,
-	toggleReadableFontIcon
+	toggleReadableFontIcon,
 } from './icons';
 import './editor.scss';
 

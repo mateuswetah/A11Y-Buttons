@@ -83,7 +83,7 @@ function toggleHighContrast() {
  * Adds a class to the root html element to load a
  * more readable font family.
  */
- function toggleReadableFont() {
+function toggleReadableFont() {
 	loadFile( 'frontend/readable-font.css', 'css' );
 
 	const htmlElement = document.getElementsByTagName( 'html' )[ 0 ];

@@ -28,7 +28,7 @@ config.entry = {
 		process.cwd(),
 		'frontend',
 		'readable-font.scss'
-	)
+	),
 };
 
 module.exports = config;

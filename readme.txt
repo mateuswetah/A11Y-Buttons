@@ -3,7 +3,7 @@ Author:            wetah, The WordPress Contributors
 Tags:              block, a11y, accessibility
 Tested up to:      6.0
 Requires at least: 6.0
-Stable tag:        0.1.2
+Stable tag:        0.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -17,6 +17,7 @@ The buttons available are:
 
 * Skip-to-content button - Add a link to any anchored part of your website. You can create and set as many as you want;
 * Contrast mode toggle - Enable a stylesheet with extremely high contrast;
+* Readable font toggle - Forces usage of the [Atkinson Hyperlegible Font](https://brailleinstitute.org/freefont "Braille Institute page about the Atkinson font") for better readability;
 * Increase/decrease/restore font-size - Change your website's root font size. Check the F.A.Q. section about its usage.
 
 All of the buttons have the following features:
@@ -69,6 +70,10 @@ The plugin keeps track of font-size and contrast toggle state preferences across
 
 Originally, we planned to have a simple feature to add `accesskey` to each button. After reading [this](https://webaim.org/techniques/keyboard/accesskey#spec "WebAIM article about accesskey"), we gave up.
 
+= Can I invert the color of an image in High Contrast mode? =
+
+Yes! If you have an image like a monochromatic logo that would make sense to be inverted, add the class `a11y-invert-on-contrast-mode` to it so it can be inverted.
+
 == Screenshots ==
 
 1. The A11Y Buttons parent block, which accepts different buttons inside it with layout settings and icon display options.
@@ -79,6 +84,10 @@ Originally, we planned to have a simple feature to add `accesskey` to each butto
 6. Font size decreased;
 
 == Changelog ==
+
+= 0.2.0 =
+* Adds "Readable font" button with [Atkinson Hyperlegible Font](https://brailleinstitute.org/freefont "Braille Institute page about the Atkinson font"); 
+* Adds class `a11y-invert-on-contrast-mode` to images and figures that you wish to be have color inverted on contrast mode.
 
 = 0.1.2 =
 * Fixes contrast mode css path;
@@ -91,3 +100,14 @@ Originally, we planned to have a simple feature to add `accesskey` to each butto
 = 0.1.0 =
 * Initial - quite experimental - release, featuring contrast toggle, font size tweak and skip to link buttons.
 
+== Copyright ==
+
+A11y Buttons plugin, Copyright 2022 wetah
+A11y Buttons plugin is distributed under the terms of the GNU GPLv3
+License details: https://github.com/mateuswetah/A11Y-Buttons/blob/main/LICENSE
+
+A11y Buttons plugin bundles the following third-party resource:
+
+Atkinson Hyperlegible Font Copyright 2020 Braille Institute
+License details: http://brailleinstitute.org/wp-content/uploads/2020/11/Atkinson-Hyperlegible-Font-License-2020-1104.pdf
+Source: https://brailleinstitute.org/freefont
