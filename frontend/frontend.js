@@ -80,6 +80,25 @@ function toggleHighContrast() {
 }
 
 /**
+ * Adds a class to the root html element to load a
+ * more readable font family.
+ */
+ function toggleReadableFont() {
+	loadFile( 'frontend/readable-font.css', 'css' );
+
+	const htmlElement = document.getElementsByTagName( 'html' )[ 0 ];
+	const isReadableFontEnabled = htmlElement.classList.toggle(
+		'a11y-buttons-readable-font-mode'
+	);
+
+	// Save data to window.sessionStorage
+	window.sessionStorage.setItem(
+		'a11y-buttons-readable-font-mode',
+		isReadableFontEnabled
+	);
+}
+
+/**
  * Run this when loading the page to see if any values where
  * set previously. This way we keep settings across pages.
  */
@@ -95,6 +114,12 @@ function updateStateFromStorage() {
 		window.sessionStorage.getItem( 'a11y-buttons-high-contrast-mode' ) ===
 		'true';
 	if ( isContrastModeEnabled ) toggleHighContrast();
+
+	// Get saved data from window.sessionStorage
+	const isReadableFontEnabled =
+		window.sessionStorage.getItem( 'a11y-buttons-readable-font-mode' ) ===
+		'true';
+	if ( isReadableFontEnabled ) toggleReadableFont();
 }
 
 /**
@@ -131,6 +156,9 @@ function addActionsToButtons() {
 					break;
 				case 'toggle-high-contrast':
 					toggleHighContrast();
+					break;
+				case 'toggle-readable-font':
+					toggleReadableFont();
 					break;
 			}
 		} );

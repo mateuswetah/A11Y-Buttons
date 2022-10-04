@@ -33,6 +33,7 @@ import {
 	decreaseFontSizeIcon,
 	resetFontSizeIcon,
 	skipToContentIcon,
+	toggleReadableFontIcon
 } from './icons';
 import './editor.scss';
 
@@ -89,6 +90,8 @@ export default function Edit( props ) {
 				return resetFontSizeIcon;
 			case 'skip-to-content':
 				return skipToContentIcon;
+			case 'toggle-readable-font':
+				return toggleReadableFontIcon;
 			default:
 				return null;
 		}
@@ -106,6 +109,8 @@ export default function Edit( props ) {
 				return __( 'Reset font size', 'a11y-buttons' );
 			case 'skip-to-content':
 				return __( 'Skip to content', 'a11y-buttons' );
+			case 'toggle-readable-font':
+				return __( 'Toggle readable font', 'a11y-buttons' );
 			default:
 				return null;
 		}

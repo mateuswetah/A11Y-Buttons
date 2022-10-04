@@ -12,6 +12,7 @@ import {
 	decreaseFontSizeIcon,
 	resetFontSizeIcon,
 	skipToContentIcon,
+	toggleReadableFontIcon,
 } from './icons';
 
 export default [
@@ -86,4 +87,18 @@ export default [
 		),
 		isActive: [ 'action' ],
 	},
+	{
+		name: 'a11y-button--toggle-readable-font',
+		attributes: {
+			content: __( 'Toggle readable font', 'a11y-buttons' ),
+			action: 'toggle-readable-font',
+		},
+		title: __( 'Toggle readable font', 'a11y-buttons' ),
+		icon: toggleReadableFontIcon,
+		description: __(
+			'Use this block to create a button that forces rendering of a more readable font family.',
+			'a11y-buttons'
+		),
+		isActive: [ 'action' ],
+	}
 ];

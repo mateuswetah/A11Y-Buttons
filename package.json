@@ -5,6 +5,7 @@
 	"author": "mateuswetah",
 	"license": "GPL-3.0-or-later",
 	"main": "build/index.js",
+	"files": [ "build/a11y-button", "build/a11y-buttons", "build/frontend", "assets" ],
 	"scripts": {
 		"build": "wp-scripts build --webpack-src-dir=blocks --webpack-copy-php",
 		"format": "wp-scripts format",

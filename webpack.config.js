@@ -24,6 +24,11 @@ config.entry = {
 		'frontend',
 		'high-contrast.scss'
 	),
+	'frontend/readable-font': path.resolve(
+		process.cwd(),
+		'frontend',
+		'readable-font.scss'
+	)
 };
 
 module.exports = config;

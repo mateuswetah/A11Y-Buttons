@@ -72,10 +72,24 @@ export const skipToContentIcon = (
 	</SVG>
 );
 
+export const toggleReadableFontIcon = (
+	<SVG
+		xmlns="http://www.w3.org/2000/svg"
+		fill="currentColor"
+		height="1.25em"
+		width="1.25em"
+		viewBox="0 0 24 24"
+	>
+		<Path
+    		d="m 5,3.2109373 v 2.8007813 h 5.599609 V 20.789063 h 2.800782 V 6.0117186 H 19 V 3.2109373 Z" />
+	</SVG>
+);
+
 export default {
 	increaseFontSizeIcon,
 	decreaseFontSizeIcon,
 	resetFontSizeIcon,
 	toggleHighContrastIcon,
 	skipToContentIcon,
+	toggleReadableFontIcon
 };
