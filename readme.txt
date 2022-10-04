@@ -87,7 +87,7 @@ Yes! If you have an image like a monochromatic logo that would make sense to be 
 
 = 0.2.0 =
 * Adds "Readable font" button with [Atkinson Hyperlegible Font](https://brailleinstitute.org/freefont "Braille Institute page about the Atkinson font"); 
-* Adds class `a11y-invert-on-contrast-mode` to images and figures that you wish to be have color inverted on contrast mode.
+* Adds class `a11y-invert-on-contrast-mode` to images and figures that you wish to have color inverted on contrast mode.
 
 = 0.1.2 =
 * Fixes contrast mode css path;
