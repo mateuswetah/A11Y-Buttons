@@ -3,7 +3,7 @@ Author:            wetah, The WordPress Contributors
 Tags:              block, a11y, accessibility
 Tested up to:      6.8
 Requires at least: 6.4
-Stable tag:        0.3.0
+Stable tag:        0.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -88,6 +88,9 @@ I know, it is a bit confusing and advanced topic. If you keep the default ("On-D
 6. Font size decreased;
 
 == Changelog ==
+
+= 0.4.0 =
+* Creates option in the settings page to define custom CSS to be used in the High Contrast mode.
 
 = 0.3.0 =
 * Creates plugin settings page.

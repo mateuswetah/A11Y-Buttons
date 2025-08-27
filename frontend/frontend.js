@@ -75,7 +75,7 @@ function toggleHighContrast() {
 	const customHighContrastCssFile = window.a11yButtonSettings
 		? window.a11yButtonSettings.customHighContrastCssFile
 		: '';
-	if ( !customHighContrastCssFile ) {
+	if ( ! customHighContrastCssFile ) {
 		const pluginPath = window.a11yButtonSettings
 			? window.a11yButtonSettings.pluginBuildPath
 			: '';

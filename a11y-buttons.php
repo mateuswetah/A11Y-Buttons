@@ -4,7 +4,7 @@
  * Description:       A basic list of buttons that may be used to improve your website accessibility.
  * Requires at least: 6.4
  * Requires PHP:      7.4
- * Version:           0.3.0
+ * Version:           0.4.0
  * Author:            wetah
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
