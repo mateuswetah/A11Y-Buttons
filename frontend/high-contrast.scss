@@ -3,34 +3,47 @@
 /* This file holds the styling made by the plugin
  * when the high contrast mode is active
  */
+
 .a11y-buttons-high-contrast-mode {
+	/* High Contrast Color Variables */
+	--a11y-buttons-high-contrast-bg: #000;
+	--a11y-buttons-high-contrast-text: #fff;
+	--a11y-buttons-high-contrast-fill: #fff;
+	--a11y-buttons-high-contrast-link: rgb(0, 225, 255);
+	--a11y-buttons-high-contrast-link-hover: rgb(251, 255, 0);
+	--a11y-buttons-high-contrast-link-active: rgb(21, 255, 0);
+	--a11y-buttons-high-contrast-link-visited: rgb(225, 0, 255);
+	--a11y-buttons-high-contrast-focus: rgb(0, 225, 255);
+	--a11y-buttons-high-contrast-focus-hover: rgb(251, 255, 0);
+	--a11y-buttons-high-contrast-focus-active: rgb(21, 255, 0);
+	--a11y-buttons-high-contrast-focus-focus: rgb(255, 145, 0);
 
 	*,
 	*.has-background,
 	*.has-text-color {
-		background-color: #000 !important;
-		color: #fff !important;
-		fill: #fff !important;
+		background-color: var(--a11y-buttons-high-contrast-bg) !important;
+		color: var(--a11y-buttons-high-contrast-text) !important;
+		fill: var(--a11y-buttons-high-contrast-fill) !important;
 	}
 
 	a,
 	a.has-link-color {
-		color: rgb(0, 225, 255) !important;
+		color: var(--a11y-buttons-high-contrast-link) !important;
 
 		> * {
 			color: inherit !important;
 		}
 
 		&:active {
-			color: rgb(21, 255, 0) !important;
+			color: var(--a11y-buttons-high-contrast-link-active) !important;
 		}
 
 		&:hover {
-			color: rgb(251, 255, 0) !important;
+			color: var(--a11y-buttons-high-contrast-link-hover) !important;
 		}
 
 		&:visited {
-			color: rgb(225, 0, 255) !important;
+			color: var(--a11y-buttons-high-contrast-link-visited) !important;
 		}
 	}
 
@@ -39,18 +52,18 @@
 	input,
 	textarea,
 	select {
-		box-shadow: 0 0 0 3px rgb(0, 225, 255) !important;
+		box-shadow: 0 0 0 3px var(--a11y-buttons-high-contrast-focus) !important;
 
 		&:focus {
-			box-shadow: 0 0 0 3px rgb(255, 145, 0) !important;
+			box-shadow: 0 0 0 3px var(--a11y-buttons-high-contrast-focus-focus) !important;
 		}
 
 		&:hover {
-			box-shadow: 0 0 0 3px rgb(251, 255, 0) !important;
+			box-shadow: 0 0 0 3px var(--a11y-buttons-high-contrast-focus-hover) !important;
 		}
 
 		&:active {
-			box-shadow: 0 0 0 3px rgb(21, 255, 0) !important;
+			box-shadow: 0 0 0 3px var(--a11y-buttons-high-contrast-focus-active) !important;
 		}
 	}
 

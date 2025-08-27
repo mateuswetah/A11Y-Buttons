@@ -72,7 +72,20 @@ function updateFontSize( action = 'increase', setValue ) {
  * elements based on our high contrast stylesheet.
  */
 function toggleHighContrast() {
-	loadFile( 'frontend/high-contrast.css', 'css' );
+	const customHighContrastCssFile = window.a11yButtonSettings
+		? window.a11yButtonSettings.customHighContrastCssFile
+		: '';
+	if ( !customHighContrastCssFile ) {
+		const pluginPath = window.a11yButtonSettings
+			? window.a11yButtonSettings.pluginBuildPath
+			: '';
+		loadFile( pluginPath + 'frontend/high-contrast.css', 'css' );
+	} else {
+		const pluginUploadPath = window.a11yButtonSettings
+			? window.a11yButtonSettings.pluginUploadPath
+			: '';
+		loadFile( pluginUploadPath + customHighContrastCssFile, 'css' );
+	}
 
 	const htmlElement = document.getElementsByTagName( 'html' )[ 0 ];
 	const isContrastModeEnabled = htmlElement.classList.toggle(
@@ -91,7 +104,10 @@ function toggleHighContrast() {
  * more readable font family.
  */
 function toggleReadableFont() {
-	loadFile( 'frontend/readable-font.css', 'css' );
+	const pluginPath = window.a11yButtonSettings
+		? window.a11yButtonSettings.pluginBuildPath
+		: '';
+	loadFile( pluginPath + 'frontend/readable-font.css', 'css' );
 
 	const htmlElement = document.getElementsByTagName( 'html' )[ 0 ];
 	const isReadableFontEnabled = htmlElement.classList.toggle(
@@ -197,11 +213,6 @@ function loadFile( path, type ) {
 	if ( loadAssetsViaBlockJson ) {
 		return;
 	}
-
-	const pluginPath = window.a11yButtonSettings
-		? window.a11yButtonSettings.pluginBuildPath
-		: '';
-	path = pluginPath + path;
 
 	if ( type === 'js' ) {
 		const fileref = document.createElement( 'script' );
