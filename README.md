@@ -27,6 +27,11 @@ _We understand that accessibility is a huge topic and that no solution is perfec
 
 If you are a developer and want to contribute to the project, you'll be pleased to know that we are using [wp-scrips](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-scripts/ "@wordpress/scripts documentation"), which makes things much easier. As long as you have Node.js 14.0.0 or later, and npm 6.14.4 or later, you can use:
 
+If you haven't already,
+```
+npm run install
+```
+
 For a quick, hot-reloadable development build:
 
 ```
@@ -94,3 +99,7 @@ Originally, we planned to have a simple feature to add `accesskey` to each butto
 ### Can I invert the color of an image in High Contrast mode?
 
 Yes! If you have an image like a monochromatic logo that would make sense to be inverted, add the class `a11y-invert-on-contrast-mode` to it so it can be inverted.
+
+### Can you please explain me better the "Asset Loading Method" option in Admin → Settings → A11Y Buttons?
+
+I know, it is a bit confusing and advanced topic. If you keep the default ("On-Demand Loading"), a small JS script will always be loaded in your website. This script will be responsible for detecting the presence of A11Y Buttons, add interactivity for them and, when needed, enqueue CSS assets like the ones used by High Contrast and Readable Font buttons. The idea is that the style is only inserted in the HTML header if the button is clicked. It also works if you used not the Gutenberg block but a simple HTML markup to mimic the block. However, this has a performance issue: the CSS are not cacheable. By using the second option ("Block Detection Loading") we leverage the entire assets enqueue job to WordPress. If it detects a buttons block in that page it will load both the JS script and the CSS files. This allow them to be cacheable. The disadvantage is that all CSS will be loaded even if a certain button is not used... but keep in mind that they are really small. This also won't work for the rare scenarios where you are building your HTML markup by hand instead of using blocks.  

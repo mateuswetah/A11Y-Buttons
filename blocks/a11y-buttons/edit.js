@@ -52,7 +52,7 @@ const getDefaultBlockLayout = ( blockTypeOrName ) => {
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
  * @param {Object} props
- * @return {WPElement} Element to render.
+ * @return {JSX.Element} Element to render.
  */
 export default function Edit( props ) {
 	const { name, attributes, setAttributes } = props;

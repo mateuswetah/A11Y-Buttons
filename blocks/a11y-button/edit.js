@@ -43,7 +43,7 @@ import './editor.scss';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
  * @param {Object} props
- * @return {WPElement} Element to render.
+ * @return {JSX.Element} Element to render.
  */
 export default function Edit( props ) {
 	const { attributes, setAttributes, context, className } = props;
@@ -75,8 +75,9 @@ export default function Edit( props ) {
 	const iconDisplay = context[ 'a11yButtons/iconDisplay' ]
 		? context[ 'a11yButtons/iconDisplay' ]
 		: 'left';
-	if ( iconDisplay !== attributes.iconDisplay )
+	if ( iconDisplay !== attributes.iconDisplay ) {
 		setAttributes( { iconDisplay } );
+	}
 
 	function getDefaultSVGIcon() {
 		switch ( attributes.action ) {
@@ -130,7 +131,7 @@ export default function Edit( props ) {
 							help={
 								<>
 									{ __(
-										'The link should point to a HTML anchor, usually defined by an ID and preppended by "#". ',
+										'The link should point to a HTML anchor, usually defined by an ID and preppended by "#".',
 										'a11y-buttons'
 									) }
 									<ExternalLink

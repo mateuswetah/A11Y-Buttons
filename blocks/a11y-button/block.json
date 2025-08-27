@@ -1,8 +1,8 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 2,
+	"apiVersion": 3,
 	"name": "a11y-buttons/a11y-button",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"title": "A11Y Button",
 	"category": "widgets",
 	"icon": "universal-access-alt",
@@ -30,41 +30,50 @@
 	"usesContext": [ "a11yButtons/iconDisplay" ],
 	"supports": {
 		"anchor": true,
-		"align": true,
+		"align": false,
 		"alignWide": false,
 		"color": {
-			"__experimentalSkipSerialization": true,
+			"skipSerialization": true,
 			"link": true,
 			"background": true,
-			"text": true
+			"text": true,
+			"gradients": true
 		},
 		"typography": {
 			"fontSize": true,
+			"lineHeight": true,
+			"textAlign": true,
 			"__experimentalFontFamily": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalFontStyle": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalTextTransform": true,
+			"__experimentalWritingMode": true,
 			"__experimentalDefaultControls": {
-				"fontSize": true
+				"fontSize": true,
+				"lineHeight": true
 			}
 		},
 		"reusable": false,
 		"spacing": {
 			"margin": true,
-			"__experimentalSkipSerialization": true,
+			"skipSerialization": true,
 			"padding": [ "horizontal", "vertical" ],
-			"__experimentalDefaultControls": {
-				"padding": true
+			"defaultControls": {
+				"padding": true,
+				"margin": true
 			}
 		},
 		"__experimentalBorder": {
 			"color": true,
+			"radius": true,
 			"style": true,
-			"width": true,
-			"__experimentalDefaultControls": {
-				"color": true,
-				"style": true,
-				"width": true
-			}
+			"width": true
 		},
-		"html": true
+		"html": true,
+		"customClassName": true,
+		"className": true
 	},
 	"textdomain": "a11y-buttons",
 	"editorScript": "file:./index.js",

@@ -1,9 +1,9 @@
 === A11y Buttons ===
 Author:            wetah, The WordPress Contributors 
 Tags:              block, a11y, accessibility
-Tested up to:      6.0
-Requires at least: 6.0
-Stable tag:        0.2.0
+Tested up to:      6.8
+Requires at least: 6.4
+Stable tag:        0.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -84,6 +84,10 @@ Yes! If you have an image like a monochromatic logo that would make sense to be 
 6. Font size decreased;
 
 == Changelog ==
+
+= 0.3.0 =
+* Creates plugin settings page.
+* Adds option to tweak Loading Assets Strategy, allowing for a more cacheable solution.
 
 = 0.2.0 =
 * Adds "Readable font" button with [Atkinson Hyperlegible Font](https://brailleinstitute.org/freefont "Braille Institute page about the Atkinson font"); 

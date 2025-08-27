@@ -9,8 +9,11 @@
  * @param {Function} callback
  */
 const performWhenDocumentIsLoaded = ( callback ) => {
-	if ( /comp|inter|loaded/.test( document.readyState ) ) callback();
-	else document.addEventListener( 'DOMContentLoaded', callback, false );
+	if ( /comp|inter|loaded/.test( document.readyState ) ) {
+		callback();
+	} else {
+		document.addEventListener( 'DOMContentLoaded', callback, false );
+	}
 };
 
 /**
@@ -42,9 +45,13 @@ function updateFontSize( action = 'increase', setValue ) {
 	let fontSizeValue =
 		values.length && ! isNaN( values[ 0 ] ) ? Number( values[ 0 ] ) : 16;
 
-	if ( action === 'increase' && fontSizeValue <= 64 ) fontSizeValue += 4;
-	else if ( action === 'decrease' && fontSizeValue >= 8 ) fontSizeValue -= 4;
-	else return;
+	if ( action === 'increase' && fontSizeValue <= 64 ) {
+		fontSizeValue += 4;
+	} else if ( action === 'decrease' && fontSizeValue >= 8 ) {
+		fontSizeValue -= 4;
+	} else {
+		return;
+	}
 
 	const fontSizeUnit =
 		values.length &&
@@ -107,19 +114,25 @@ function updateStateFromStorage() {
 	const customFontSize = window.sessionStorage.getItem(
 		'a11y-buttons-font-size'
 	);
-	if ( customFontSize ) updateFontSize( 'set', customFontSize );
+	if ( customFontSize ) {
+		updateFontSize( 'set', customFontSize );
+	}
 
 	// Get saved data from window.sessionStorage
 	const isContrastModeEnabled =
 		window.sessionStorage.getItem( 'a11y-buttons-high-contrast-mode' ) ===
 		'true';
-	if ( isContrastModeEnabled ) toggleHighContrast();
+	if ( isContrastModeEnabled ) {
+		toggleHighContrast();
+	}
 
 	// Get saved data from window.sessionStorage
 	const isReadableFontEnabled =
 		window.sessionStorage.getItem( 'a11y-buttons-readable-font-mode' ) ===
 		'true';
-	if ( isReadableFontEnabled ) toggleReadableFont();
+	if ( isReadableFontEnabled ) {
+		toggleReadableFont();
+	}
 }
 
 /**
@@ -130,7 +143,9 @@ function addActionsToButtons() {
 		'wp-block-a11y-buttons-a11y-button'
 	);
 
-	if ( ! a11yButtonsWrappers || ! a11yButtonsWrappers.length ) return;
+	if ( ! a11yButtonsWrappers || ! a11yButtonsWrappers.length ) {
+		return;
+	}
 
 	const a11yButtons = [];
 	for ( const a11yButton of a11yButtonsWrappers ) {
@@ -139,8 +154,9 @@ function addActionsToButtons() {
 			a11yButton.childNodes[ 0 ] &&
 			a11yButton.childNodes[ 0 ].tagName === 'BUTTON' &&
 			a11yButton.childNodes[ 0 ].dataset.action
-		)
+		) {
 			a11yButtons.push( a11yButton.childNodes[ 0 ] );
+		}
 	}
 	for ( const a11yButton of a11yButtons ) {
 		a11yButton.addEventListener( 'click', () => {
@@ -165,7 +181,23 @@ function addActionsToButtons() {
 	}
 }
 
+/**
+ * Utility function to load a file from the plugin build path.
+ * If the loadAssetsViaBlockJson setting is true, we don't load the file,
+ * since the assets are already loaded via the block.json file.
+ *
+ * @param {string} path
+ * @param {string} type
+ */
 function loadFile( path, type ) {
+	const loadAssetsViaBlockJson = window.a11yButtonSettings
+		? window.a11yButtonSettings.loadAssetsViaBlockJson
+		: false;
+
+	if ( loadAssetsViaBlockJson ) {
+		return;
+	}
+
 	const pluginPath = window.a11yButtonSettings
 		? window.a11yButtonSettings.pluginBuildPath
 		: '';
